@@ -83,7 +83,7 @@ const Form = ({ children, closeForm, isOpen }) => {
                   encType="multipart/form-data"
                   name="contact"
                   method="post"
-                  action="http://localhost:3000/contact"
+                  action="https://ojbportfolio.herokuapp.com/contact"
                 >
 
                     <FormComponents closeForm={closeForm}/>
