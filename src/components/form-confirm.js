@@ -26,7 +26,7 @@ export default class Confirm extends React.Component {
 
       axios({
       method: 'post',
-      url: 'http://localhost:3000/contact',
+      url: 'https://ojbportfolio.herokuapp.com/contact',
       data: bodyFormData,
       headers: {'Content-Type': 'multipart/form-data' }
       })
