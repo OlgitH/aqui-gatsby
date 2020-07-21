@@ -114,7 +114,7 @@ const IndexPage = () => {
                 I try to apply the core principles of UX wherever possible.
               </p>
             </div>
-            <div className="col-7">
+            <div className="col-md-7">
               <Diagram />
             </div>
           </div>
