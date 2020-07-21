@@ -13,6 +13,8 @@ const WorkPage = () => {
       <SEO title="Work" />
 
       <Projects />
+
+      
     </Layout>
   )
 }

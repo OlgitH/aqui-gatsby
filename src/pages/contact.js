@@ -35,7 +35,6 @@ const CustomSection = styled.section`
 
   h2 {
     font-size: 4rem;
-    line-height: 1;
     padding-bottom:0;
     @media (max-width: 768px) {
       font-size: 3rem;

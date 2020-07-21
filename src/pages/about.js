@@ -91,6 +91,23 @@ const AboutPage = () => {
           </div>
         </div>
       </CustomSection>
+
+      <section style={{background:'#ff4d4d', padding:'2rem 0', color:'#fff'}}>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-5">
+              <h3>My Skillset</h3>
+              <p>
+                I specialise in building sites using the so-called JAMStack, using front end technologies such as React, Next Js and Gatsby.
+                For the backend I write Node Js or PHP.
+              </p>
+            </div>
+        
+          </div>
+        </div>
+      </section>
+
+
     </Layout>
   )
 }
