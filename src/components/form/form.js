@@ -8,8 +8,9 @@ import Success from "./form-success"
 import { css } from "@emotion/core"
 import styled from '@emotion/styled'
 import posed, {PoseGroup} from "react-pose"
+import "./form.css"
 
-import Close from "../images/close-icon.png"
+import Close from "../../images/close-icon.png"
 
 const Container = posed.div({
   enter: {
@@ -35,6 +36,7 @@ const containerStyle = css`
   width:40%;
   @media (max-width: 1024px) {
     width:60%;
+    padding:4rem 2rem;
   }
   @media (max-width: 600px) {
     width:90%;
@@ -49,6 +51,7 @@ const innerStyle = css`
   background-color:transparent;
   margin:0 auto;
   position:relative;
+  color:#fff;
 `
 
 const formStyle = css``
@@ -83,7 +86,7 @@ const Form = ({ children, closeForm, isOpen }) => {
                   encType="multipart/form-data"
                   name="contact"
                   method="post"
-                  
+
                 >
 
                     <FormComponents closeForm={closeForm}/>

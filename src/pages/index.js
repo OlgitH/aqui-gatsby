@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 import Image from "../components/images/homeImage"
 import Diagram from "../components/images/workflowImage"
 
-import Form from "../components/form"
 import SEO from "../components/seo"
 import SplitText from "react-pose-text"
 import styled from "@emotion/styled"

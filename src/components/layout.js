@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
-import Form from "./form"
+import Form from "./form/form"
 
 import { css } from "@emotion/core"
 import { connect } from "react-redux"

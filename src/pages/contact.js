@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import "bootstrap/dist/css/bootstrap-grid.min.css"
 
 import Layout from "../components/layout"
-import Form from "../components/form"
+import Form from "../components/form/form"
 import Image from "../components/images/contactImage"
 import SEO from "../components/seo"
 import SplitText from "react-pose-text"
@@ -36,6 +36,7 @@ const CustomSection = styled.section`
   h2 {
     font-size: 4rem;
     line-height: 1;
+    padding-bottom:0;
     @media (max-width: 768px) {
       font-size: 3rem;
     }
@@ -116,8 +117,6 @@ const ContactPage = ({formVisible, toggleForm}) => {
                   >
                     Get in touch.
                   </SplitText>
-
-
                 </h2>
 
                 <Button

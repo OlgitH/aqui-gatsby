@@ -1,14 +1,33 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { Link } from "gatsby"
+import "bootstrap/dist/css/bootstrap-grid.min.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+
+
+const NotFoundPage = () => {
+
+  return (
+    <Layout>
+      <SEO title="Page Not Found" />
+
+      <section>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <p>
+                Dayum, page not found
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </Layout>
+  )
+}
 
 export default NotFoundPage

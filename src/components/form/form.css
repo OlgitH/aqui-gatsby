@@ -1,0 +1,9 @@
+label span {
+  display:block;
+}
+textarea {
+  max-width:100%;
+}
+input {
+  margin-left:0;
+}

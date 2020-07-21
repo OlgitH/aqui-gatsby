@@ -1,19 +1,18 @@
+import { Link } from "gatsby"
 import React from "react"
 import "bootstrap/dist/css/bootstrap-grid.min.css"
-import Arrow from "../images/arrow.png"
-import ArrowBack from "../images/arrow-back.png"
+import { css } from "@emotion/core"
+import ArrowBack from "../../images/arrow-back.png"
+import Arrow from "../../images/arrow.png"
 import SimpleReactValidator from 'simple-react-validator';
 import styled from "@emotion/styled"
+import "./form.css"
 
 const InputGroup = styled.div`
 margin:10px 0;
-
-input {
-  margin-left:10px;
-}
 `
 
-export default class Email extends React.Component {
+export default class FormMessage extends React.Component {
 
   constructor(props) {
     super(props);
@@ -21,7 +20,6 @@ export default class Email extends React.Component {
   }
 
   continue = e => {
-
     if (this.validator.allValid()) {
       e.preventDefault();
       // console.log('valid');
@@ -32,7 +30,6 @@ export default class Email extends React.Component {
         // you can use the autoForceUpdate option to do this automatically`
         this.forceUpdate();
     }
-
   }
 
   back = e => {
@@ -41,44 +38,30 @@ export default class Email extends React.Component {
   }
 
   render() {
+
     const { values, handleChange } = this.props
 
     return (
-    <>
+      <>
       <img onClick={this.back} src={ArrowBack} width="20" style={{cursor:'pointer'}}/>
 
-      <InputGroup>
-        <label>
-          Email
-          <input
-            type="text"
-            name="email"
-            value={values.email}
-            onChange={handleChange("email")}
-          />
-        {this.validator.message('email', values.email, 'required|email')}
-
-        </label>
-      </InputGroup>
-
-      <InputGroup>
-        <label>
-          Phone
-          <input
-            type="phone"
-            name="phone"
-            value={values.phone}
-            onChange={handleChange("phone")}
-          />
-        {this.validator.message('phone', values.phone, 'required|phone')}
-
-        </label>
-      </InputGroup>
-
+    <InputGroup>
+      <label>
+        <span>Please leave a message.</span><br/>
+        <textarea
+          type="text"
+          name="message"
+          value={values.message}
+          onChange={handleChange("message")}
+          style={{width:'400px',height:'260px'}}
+        />
+      {this.validator.message('message', values.message, 'required')}
+      </label>
+    </InputGroup>
 
       <img onClick={this.continue} src={Arrow} width="20" style={{cursor:'pointer'}}/>
 
-    </>
+      </>
 
     )
   }

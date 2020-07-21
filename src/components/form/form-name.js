@@ -1,18 +1,14 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap-grid.min.css"
-import Arrow from "../images/arrow.png"
-import ArrowBack from "../images/arrow-back.png"
+import Arrow from "../../images/arrow.png"
+import ArrowBack from "../../images/arrow-back.png"
 import SimpleReactValidator from 'simple-react-validator';
 import styled from "@emotion/styled"
-
+import "./form.css"
 
 
 const InputGroup = styled.div`
 margin:10px 0;
-
-input {
-  margin-left:10px;
-}
 `
 
 
@@ -61,7 +57,7 @@ export default class Name extends React.Component {
 
         <InputGroup>
           <label>
-            First name
+            <span>First name</span>
             <input
               className="form-control"
               type="text"
@@ -77,7 +73,7 @@ export default class Name extends React.Component {
 
         <InputGroup>
           <label style={{marginTop:'20px',marginBottom:'20px'}}>
-            Last name
+            <span>Last name</span>
             <input
               type="text"
               name="lastName"
