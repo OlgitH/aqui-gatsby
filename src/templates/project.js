@@ -7,6 +7,7 @@ import Image from "../components/images/aboutImage"
 import SEO from "../components/seo"
 import SplitText from "react-pose-text"
 import styled from "@emotion/styled"
+import Img from "gatsby-image"
 
 
 export default function Template({ data }) {
@@ -31,7 +32,7 @@ export default function Template({ data }) {
                   <a href={project.projectLink} target="_blank">View website</a>
                 }
               </p>
-            
+
             </div>
           </div>
         </div>
@@ -45,7 +46,7 @@ export default function Template({ data }) {
                       project.projectImages &&
                       project.projectImages.map((src, count) => {
                         return (
-                          <img src={src.fluid.srcWebp} alt={project.title + ' Image ' + (count+1)} />
+                          <Img fluid={src.fluid} alt={project.title + ' Image ' + (count+1)} style={{marginBottom:'15px'}}/>
                         )
 
                         {/*console.log(item.fluid)*/}

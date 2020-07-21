@@ -23,7 +23,7 @@ const GridItem = posed.div({
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query queryProjects {
-      allContentfulProject {
+      allContentfulProject(sort: {fields: order}) {
         edges {
           node {
             title
