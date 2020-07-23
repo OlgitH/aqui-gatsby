@@ -34,7 +34,8 @@
     "simple-react-validator": "^1.5.0"
   },
   "devDependencies": {
-    "prettier": "2.0.5"
+    "prettier": "2.0.5",
+    "react-device-detect": "^1.13.1"
   },
   "keywords": [
     "gatsby"

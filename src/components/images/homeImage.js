@@ -2,6 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { css } from "@emotion/core"
+import {isIE} from 'react-device-detect';
+
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
  * images with lazy loading and reduced file sizes. The image is loaded using a
@@ -19,6 +21,18 @@ const imageStyle = css`
   top: 50%;
   left: -50px;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    top:0;
+  }
+`
+
+const IEStyle = css`
+  position:relative;
+  top:0;
+  left:0;
 `
 
 const Image = () => {
@@ -35,7 +49,7 @@ const Image = () => {
   `)
 
   return (
-    <Img fixed={data.placeholderImage.childImageSharp.fixed} css={imageStyle} />
+    <Img fixed={data.placeholderImage.childImageSharp.fixed} css={ isIE ? IEStyle : imageStyle } />
   )
 }
 
