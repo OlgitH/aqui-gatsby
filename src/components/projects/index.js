@@ -45,8 +45,8 @@ const Projects = () => {
     <CustomSection initialPose="exit" pose="enter" css={style}>
       <div className="container">
         <div className="row" style={{ margin: "-8px" }}>
-          {projects.map(project => (
-            <div className="col-6 col-md-3 px-0">
+          {projects.map((project, i) => (
+            <div className="col-6 col-md-3 px-0" key={i}>
               <GridItem
                 initialPose="exit"
                 pose="enter"

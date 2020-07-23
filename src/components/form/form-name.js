@@ -24,7 +24,7 @@ export default class Name extends React.Component {
     this.refs.firstName.focus();
   }
 
-  handleKeyPress(e, field) {
+  handleKeyPress(e) {
    // If enter key is pressed, focus next input field.
    if (e.keyCode === 13) {
      e.preventDefault();
@@ -33,11 +33,13 @@ export default class Name extends React.Component {
  }
 
 
+
   continue = e => {
     if (this.validator.allValid()) {
       e.preventDefault();
       // console.log('valid');
       this.props.nextStep()
+
     } else {
         this.validator.showMessages();
         // rerender to show messages for the first time
@@ -45,6 +47,27 @@ export default class Name extends React.Component {
         this.forceUpdate();
     }
   }
+
+  continueOnEnter = e => {
+    if (e.keyCode === 13) {
+        if (this.validator.allValid()) {
+          e.preventDefault();
+          // console.log('valid');
+
+            e.preventDefault();
+            this.props.nextStep()
+
+
+        } else {
+            this.validator.showMessages();
+            // rerender to show messages for the first time
+            // you can use the autoForceUpdate option to do this automatically`
+            this.forceUpdate();
+        }
+    }
+  }
+
+
 
 
 
@@ -80,6 +103,7 @@ export default class Name extends React.Component {
               value={values.lastName}
               onChange={handleChange("lastName")}
               ref="lastName"
+              onKeyDown={this.continueOnEnter}
             />
           {this.validator.message('lastName', values.lastName, 'required|alpha')}
 

@@ -32,6 +32,25 @@ export default class FormMessage extends React.Component {
     }
   }
 
+  continueOnEnter = e => {
+    if (e.keyCode === 13) {
+        if (this.validator.allValid()) {
+          e.preventDefault();
+          // console.log('valid');
+
+            e.preventDefault();
+            this.props.nextStep()
+
+
+        } else {
+            this.validator.showMessages();
+            // rerender to show messages for the first time
+            // you can use the autoForceUpdate option to do this automatically`
+            this.forceUpdate();
+        }
+    }
+  }
+
   back = e => {
     e.preventDefault();
     this.props.prevStep()
@@ -51,9 +70,11 @@ export default class FormMessage extends React.Component {
         <textarea
           type="text"
           name="message"
+          ref="message"
           value={values.message}
           onChange={handleChange("message")}
           style={{width:'400px',height:'260px'}}
+          onKeyDown={this.continueOnEnter}
         />
       {this.validator.message('message', values.message, 'required')}
       </label>
