@@ -1,5 +1,4 @@
-import React, { useEffect } from "react"
-import { Link } from "gatsby"
+import React from "react"
 import "bootstrap/dist/css/bootstrap-grid.min.css"
 
 import Layout from "../components/layout"

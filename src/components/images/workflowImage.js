@@ -16,9 +16,6 @@ import { css } from "@emotion/core"
 const imageStyle = css`
   margin: 0;
   position: absolute;
-  top: 50%;
-  left: -50px;
-  transform: translateY(-50%);
 `
 
 const Image = () => {
@@ -27,7 +24,7 @@ const Image = () => {
       placeholderImage: file(relativePath: { eq: "diagram.png" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

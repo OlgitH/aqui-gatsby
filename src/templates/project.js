@@ -1,12 +1,8 @@
-import React, { useEffect } from "react"
-import { Link } from "gatsby"
+import React from "react"
 import "bootstrap/dist/css/bootstrap-grid.min.css"
 
 import Layout from "../components/layout"
-import Image from "../components/images/aboutImage"
 import SEO from "../components/seo"
-import SplitText from "react-pose-text"
-import styled from "@emotion/styled"
 import Img from "gatsby-image"
 
 
@@ -29,7 +25,7 @@ export default function Template({ data }) {
               <p>
                 {
                   project.projectLink &&
-                  <a href={project.projectLink} target="_blank">View website</a>
+                  <a href={project.projectLink} target="_blank" rel="noreferrer">View website</a>
                 }
               </p>
 
@@ -49,7 +45,6 @@ export default function Template({ data }) {
                           <Img fluid={src.fluid} alt={project.title + ' Image ' + (count+1)} style={{marginBottom:'15px'}}/>
                         )
 
-                        {/*console.log(item.fluid)*/}
                       })
 
 

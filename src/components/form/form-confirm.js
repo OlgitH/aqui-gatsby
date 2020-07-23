@@ -1,7 +1,5 @@
-import { Link } from "gatsby"
 import React from "react"
 import "bootstrap/dist/css/bootstrap-grid.min.css"
-import { css } from "@emotion/core"
 import SimpleReactValidator from 'simple-react-validator';
 import axios from 'axios';
 import "./form.css"

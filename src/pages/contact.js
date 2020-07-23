@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-import { Link } from "gatsby"
+import React from "react"
 import "bootstrap/dist/css/bootstrap-grid.min.css"
 
 import Layout from "../components/layout"
@@ -9,7 +8,6 @@ import SEO from "../components/seo"
 import SplitText from "react-pose-text"
 import styled from "@emotion/styled"
 
-import Arrow from "../images/arrow.png"
 import { connect } from "react-redux"
 
 const CustomSection = styled.section`

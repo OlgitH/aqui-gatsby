@@ -1,5 +1,4 @@
 import React, { useEffect } from "react"
-import { Link } from "gatsby"
 import "bootstrap/dist/css/bootstrap-grid.min.css"
 
 import Layout from "../components/layout"
@@ -102,7 +101,7 @@ const AboutPage = () => {
                 For the backend I write Node Js or PHP.
               </p>
             </div>
-        
+
           </div>
         </div>
       </section>
