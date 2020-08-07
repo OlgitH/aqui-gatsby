@@ -70,9 +70,7 @@ const IndexPage = () => {
           <div className="row">
             <div className="col-md-6">
               <p>
-                I am a web developer and graphic designer based in London,
-                working in Javascript, html and css, Indesign, Illustrator and
-                Photoshop.
+                I am a UX designer and web developer based in London. I specialise in using the Adobe Creative Suite, Adbode XD, Javascript, html and css.
               </p>
             </div>
           </div>
