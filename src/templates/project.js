@@ -4,7 +4,8 @@ import "bootstrap/dist/css/bootstrap-grid.min.css"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
-
+import Back from "../images/arrow-back.png"
+import { Link } from "gatsby"
 
 export default function Template({ data }) {
   const project = data.contentfulProject // data.markdownRemark holds your post data
@@ -50,6 +51,16 @@ export default function Template({ data }) {
 
 
               }
+              <p>
+                <Link to="/work/">
+                  <img src={Back} width="10px"/>
+                  <span style={{display:'block'}}>
+                    Back to projects
+                  </span>
+
+
+                </Link>
+              </p>
             </div>
           </div>
         </div>
