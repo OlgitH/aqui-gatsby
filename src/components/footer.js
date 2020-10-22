@@ -1,7 +1,6 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap-grid.min.css"
 import { css } from "@emotion/core"
-import { connect } from "react-redux"
 
 const styles = css`
   padding: 2rem 0;

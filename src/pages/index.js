@@ -2,8 +2,11 @@ import React, { useEffect } from "react"
 import "bootstrap/dist/css/bootstrap-grid.min.css"
 
 import Layout from "../components/layout"
-import Image from "../components/images/homeImage"
-import Diagram from "../components/images/workflowImage"
+import Diagram from "../images/diagram.png"
+import WaveTop from "../images/bg/wave.svg"
+import WaveBottom from "../images/bg/home-wave-bottom.svg"
+import BG from "../images/bg/chairs.jpg"
+
 
 import SEO from "../components/seo"
 import SplitText from "react-pose-text"
@@ -12,42 +15,14 @@ import styled from "@emotion/styled"
 
 const CustomSection = styled.section`
   position: relative;
-  min-height: 400px;
-  padding:1rem 0 2rem 0;
-
-  @media (max-width: 600px) {
-    height: 200px;
-  }
-
-  @media (max-width: 600px) {
-    margin-top: 2rem;
-  }
-  .overlay {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.9);
-    height: auto;
-    overflow: hidden;
-    padding: 10px;
-  }
-
-  h2 {
-    font-size: 4rem;
-    line-height: 1;
-    @media (max-width: 768px) {
-      font-size: 3rem;
-    }
-    @media (max-width: 600px) {
-      min-height: 200px;
-      font-size: 2rem;
-    }
-  }
+  height:100vh;
+  background-image:${props => props.bg ? `url('${props.bg}')` : `blue`};
+  color:#fff;
+  background-size:1600px;
+  background-position:bottom;
+  background-repeat:no-repeat;
 `
-const Line = styled.div`
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  border-left: 1px solid #222;
-`
+
 
 const charPoses = {
   exit: { opacity: 0, y: 20 },
@@ -63,57 +38,45 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Oliver Berman - Homepage" />
+      <SEO title="Aqui Digital - Homepage" />
 
-      <section>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <p>
-                I am a UX designer and web developer based in London. I specialise in using the Adobe Creative Suite, Adobe XD, Javascript, html and css.
-              </p>
+
+        <CustomSection bg={BG}>
+            <div className="overlay" style={{background:`url(${WaveTop})`, backgroundSize:'cover', height:'100%', backgroundRepeat:'no-repeat', backgroundPosition:'0 180px'}}>
+                <div className="text-box">
+                      <div className="container">
+                        <div className="row">
+
+                              <div className="col-8">
+                                  <h2 className="slideInLg">
+                                      <SplitText
+                                        initialPose="exit"
+                                        pose="enter"
+                                        charPoses={charPoses}
+                                      >
+                                      The modern design, web development and consultancy firm that makes digital easy.
+                                      </SplitText>
+                                  </h2>
+                              </div>
+
+                        </div>
+                      </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <CustomSection>
-        <div className="container">
-          <div className="row justify-content-end">
-            <div className="col-4">
-              <Line>
-                <Image />
-              </Line>
-            </div>
+        </CustomSection>
 
-            <div className="col-8">
-              <div className="overlay">
-                <h2>
-                  <SplitText
-                    initialPose="exit"
-                    pose="enter"
-                    charPoses={charPoses}
-                  >
-                    I design and build products for a digital world.
-                  </SplitText>
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </CustomSection>
-
-      <section style={{background:'#ff4d4d', padding:'2rem 0', color:'#fff'}}>
+      <section className="standard" style={{background:`url(${WaveBottom})`, backgroundSize:'contain', backgroundRepeat:'no-repeat', backgroundPosition:'0 -100px'}}>
         <div className="container">
           <div className="row">
             <div className="col-md-5">
               <h3>Design process</h3>
-              <p>All my creative projects start with a piece of paper and a pencil. It is crucial to plan, design and prototype as much as possible before writing any code.
-                I try to apply the core principles of UX wherever possible.
+              <p>All our creative projects start with a piece of paper and a pencil. We plan, design and prototype as much as possible before writing any code.
+                We follow a User Centered approach.
               </p>
             </div>
             <div className="col-md-7">
-              <Diagram />
+              <img src={Diagram} width="100%" alt="Diagram of Design Process"/>
             </div>
           </div>
         </div>

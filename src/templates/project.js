@@ -6,14 +6,20 @@ import SEO from "../components/seo"
 import Img from "gatsby-image"
 import Back from "../images/arrow-back.png"
 import { Link } from "gatsby"
+import styled from "@emotion/styled"
+
+const CustomSection = styled.section`
+  position: relative;
+  padding:100px 0;
+`
 
 export default function Template({ data }) {
   const project = data.contentfulProject // data.markdownRemark holds your post data
   return (
-    <Layout>
+    <Layout fixed="true">
       <SEO title="About" />
 
-      <section>
+      <CustomSection>
         <div className="container">
           <div className="row">
             <div className="col-md-6">
@@ -33,7 +39,7 @@ export default function Template({ data }) {
             </div>
           </div>
         </div>
-      </section>
+      </CustomSection>
 
       <section>
         <div className="container">
@@ -51,7 +57,7 @@ export default function Template({ data }) {
 
 
               }
-              <p>
+              <div style={{position:'fixed', top:'100px', right:'0', background:'#ccc', borderRadius:'100%'}}>
                 <Link to="/work/">
                   <img src={Back} width="10px"/>
                   <span style={{display:'block'}}>
@@ -60,7 +66,7 @@ export default function Template({ data }) {
 
 
                 </Link>
-              </p>
+              </div>
             </div>
           </div>
         </div>

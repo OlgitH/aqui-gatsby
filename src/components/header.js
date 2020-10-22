@@ -3,6 +3,16 @@ import PropTypes from "prop-types"
 import React from "react"
 import "bootstrap/dist/css/bootstrap-grid.min.css"
 import styled from "@emotion/styled"
+import Logo from "../images/logo/logo-white.png"
+
+const MainHeader = styled.header`
+  position: ${props => props.rel ? `relative` : `absolute`};
+  top:0;
+  left:0;
+  width:100%;
+  z-index:99;
+  background:${props => props.rel ? `blue` : `transparent`};
+`
 
 const Menu = styled.div`
   position: relative;
@@ -10,6 +20,7 @@ const Menu = styled.div`
     position: absolute;
     right: 0;
     padding: 0;
+    margin:0;
     list-style: none;
     li {
       display: inline-block;
@@ -19,19 +30,20 @@ const Menu = styled.div`
       }
       a {
         text-decoration: none;
+        color:#fff;
       }
     }
   }
 `
 
-const Header = () => (
-  <header style={{marginBottom:'1rem'}}>
+const Header = ({fixed}) => (
+  <MainHeader rel={fixed}>
     <div className="container">
       <div className="row">
         <div className="col-4">
-          <h1 style={{ fontSize: "1.2rem"}}>
+          <h1 className="logo">
             <Link to="/" style={{ textDecoration: "none" }}>
-              Oliver Berman
+              <img src={Logo} width="100"/>
             </Link>
           </h1>
         </div>
@@ -52,7 +64,7 @@ const Header = () => (
         </div>
       </div>
     </div>
-  </header>
+  </MainHeader>
 )
 
 Header.propTypes = {

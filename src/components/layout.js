@@ -13,8 +13,7 @@ import Form from "./form/form"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import { connect } from "react-redux"
-
-import "./layout.css"
+import "./sass/layout.scss"
 
 const linkStyle = css`
   text-decoration:underline;
@@ -31,16 +30,16 @@ const Button = styled.button`
  outline:0;
  &:hover {
    background-color:#f6f6f6;
-
  }
 
 `
 
-const LO = ({ children, formVisible, toggleForm }) => {
+const LO = ({ children, formVisible, toggleForm, fixed }) => {
+
 
   return (
     <>
-      <Header />
+      <Header fixed={fixed} />
       <div>
         <main>{children}</main>
         <Footer>

@@ -29,8 +29,7 @@ const Container = posed.div({
 
 const containerStyle = css`
   position: fixed;
-  /*background-color: rgba(255,255,255,0.98);*/
-  background-color: #4775d1;
+  background-color: #fff;
   top: 0;
   right:0;
   width:40%;
@@ -42,7 +41,7 @@ const containerStyle = css`
     width:90%;
   }
   height:100vh;
-  padding:4rem;
+  padding:6rem 4rem;
   -webkit-box-shadow: -4px -2px 5px -4px rgba(204,204,204,1);
   -moz-box-shadow: -4px -2px 5px -4px rgba(204,204,204,1);
   box-shadow: -4px -2px 5px -4px rgba(204,204,204,1);
@@ -51,12 +50,12 @@ const innerStyle = css`
   background-color:transparent;
   margin:0 auto;
   position:relative;
-  color:#fff;
+  color:#000;
 `
 
 const formStyle = css``
 
-const CloseBar= styled.div`
+const CloseBar = styled.div`
 position:relative;
 width:100%;
 img.close-icon {
@@ -69,7 +68,7 @@ img.close-icon {
 
 
 const Form = ({ children, closeForm, isOpen }) => {
-
+console.log(closeForm);
   return (
 
     <PoseGroup>
@@ -86,7 +85,6 @@ const Form = ({ children, closeForm, isOpen }) => {
                   encType="multipart/form-data"
                   name="contact"
                   method="post"
-
                 >
 
                     <FormComponents closeForm={closeForm}/>

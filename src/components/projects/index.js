@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap-grid.min.css"
 import Img from "gatsby-image"
 import posed from "react-pose"
 import { css } from "@emotion/core"
+import WaveBottom from "../../images/bg/work-wave-bottom.svg"
 
 
 const CustomSection = posed.div({
@@ -11,9 +12,7 @@ const CustomSection = posed.div({
   exit: { opacity: 0 },
 })
 
-const style = css`
-  padding:1rem 0 4rem 0;
-`
+
 
 const GridItem = posed.div({
   enter: { x: 0, opacity: 1, delayChildren: 200, staggerChildren: 50 },
@@ -42,24 +41,29 @@ const Projects = () => {
   const projects = data.allContentfulProject.edges
 
   return (
-    <CustomSection initialPose="exit" pose="enter" css={style}>
-      <div className="container">
-        <div className="row" style={{ margin: "-8px" }}>
-          {projects.map((project, i) => (
-            <div className="col-6 col-md-3 px-0" key={i}>
-              <GridItem
-                initialPose="exit"
-                pose="enter"
-                style={{ padding: "8px" }}
-              > <Link to={`../projects/${project.node.slug}`}>
-                  <Img fluid={project.node.featureImage.fluid} />
-                </Link>
-              </GridItem>
+
+    <div style={{background:`url(${WaveBottom})`, backgroundSize:'contain', backgroundRepeat:'no-repeat',backgroundRepeat:'no-repeat', backgroundPosition:'top'}}>
+        <CustomSection initialPose="exit" pose="enter" >
+          <div className="container">
+            <div className="row" style={{ margin: "-8px" }}>
+              {projects.map((project, i) => (
+                <div className="col-6 col-md-3 px-0" key={i}>
+                  <GridItem
+                    initialPose="exit"
+                    pose="enter"
+                    style={{ padding: "8px" }}
+                  > <Link to={`../projects/${project.node.slug}`}>
+                      <Img fluid={project.node.featureImage.fluid} />
+                    </Link>
+                  </GridItem>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
-    </CustomSection>
+          </div>
+        </CustomSection>
+    </div>
+
+
   )
 }
 
