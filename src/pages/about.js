@@ -67,7 +67,7 @@ const AboutPage = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-8">
-                <h3>My Skillset</h3>
+                <h3>Skillset</h3>
                 <p>
                   We specialise in building sites using the so-called JAMStack, using front end technologies such as React, Next Js and Gatsby.
                   For the backend I write Node Js or PHP.
