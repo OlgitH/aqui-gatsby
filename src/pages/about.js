@@ -1,38 +1,22 @@
-import React, { useEffect } from "react"
-import "bootstrap/dist/css/bootstrap-grid.min.css"
+import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SplitText from "react-pose-text"
+import WaveBottom from "../images/bg/about-wave-bottom.svg"
 import styled from "@emotion/styled"
-import BG from "../images/bg/we-all-live-here.jpg"
+import { css } from "@emotion/core"
 
-const CustomSection = styled.section`
-  position: relative;
-  height:100vh;
-  min-height:640px;
-  background:${props => props.bg ? `url('${props.bg}')` : `blue`};
-  color:#fff;
-  background-size:cover;
-  background-repeat:no-repeat;
-`
-
-
-const charPoses = {
-  exit: { opacity: 0, y: 20 },
-  enter: {
-    opacity: 1,
-    x: 0,
-    delay: ({ charIndex }) => charIndex * 30,
-  },
-}
 
 const AboutPage = () => {
 
 
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO
+      title="About"
+      description="We are a multidisciplinary, international digital agency"
+      />
 
         <CustomSection>
             <div className="overlay">
@@ -47,7 +31,7 @@ const AboutPage = () => {
                                         pose="enter"
                                         charPoses={charPoses}
                                       >
-                                      We are a multidisciplinary design agency.
+                                      We are a multidisciplinary digital agency.
                                       </SplitText>
 
                                   </h2>
@@ -58,7 +42,7 @@ const AboutPage = () => {
                                       </p>
                                       <p>
                                       We love to design and plan websites, but we also love to work on design for print, video, and almost anything with a
-                                      creative aspect. As Massimo Vignelli said, "Once you can design one thing you can design anything".
+                                      creative aspect.
                                       </p>
                                       <p>
                                       We specialise in building sites using the JAMStack approach -
@@ -79,7 +63,7 @@ const AboutPage = () => {
 
         </CustomSection>
 
-        <section className="standard">
+        <section className="standard" css={skillset}>
           <div className="container">
             <div className="row">
               <div className="col-md-8">
@@ -99,3 +83,38 @@ const AboutPage = () => {
 }
 
 export default AboutPage
+
+
+// Styles etc go here
+////////////**********************/////////////////////////////////////////////////
+
+const CustomSection = styled.section`
+  position: relative;
+  height:100vh;
+  min-height:640px;
+  background:${props => props.bg ? `url('${props.bg}')` : `blue`};
+  color:#fff;
+  background-size:cover;
+  background-repeat:no-repeat;
+  max-height:800px;
+`
+
+const skillset = css`
+background:url(${WaveBottom});
+background-size: contain;
+background-repeat: no-repeat;
+background-position: 0 -1px;
+@media (max-width: 1200px) {
+  background-position: 0 -20px;
+}
+`
+
+
+const charPoses = {
+  exit: { opacity: 0, y: 20 },
+  enter: {
+    opacity: 1,
+    x: 0,
+    delay: ({ charIndex }) => charIndex * 30,
+  },
+}

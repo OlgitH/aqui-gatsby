@@ -7,13 +7,14 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import Header from "./header"
-import Footer from "./footer"
-import Form from "./form/form"
+import Header from "../header"
+import Footer from "../footer"
+import Form from "../form/form"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import { connect } from "react-redux"
 import "./sass/layout.scss"
+import "bootstrap/dist/css/bootstrap-grid.min.css"
 
 const linkStyle = css`
   text-decoration:underline;

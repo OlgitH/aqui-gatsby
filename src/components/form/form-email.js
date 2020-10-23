@@ -1,14 +1,10 @@
 import React from "react"
-import "bootstrap/dist/css/bootstrap-grid.min.css"
 import Arrow from "../../images/arrow.png"
 import ArrowBack from "../../images/arrow-back.png"
 import SimpleReactValidator from 'simple-react-validator';
 import styled from "@emotion/styled"
 import "./form.css"
-
-const InputGroup = styled.div`
-margin:10px 0;
-`
+import { InputGroup } from './styleComponents'
 
 export default class Email extends React.Component {
 
@@ -113,3 +109,7 @@ export default class Email extends React.Component {
     )
   }
 }
+
+
+// Styles etc go here
+////////////**********************/////////////////////////////////////////////////

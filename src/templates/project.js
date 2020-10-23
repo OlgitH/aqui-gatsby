@@ -7,14 +7,11 @@ import Img from "gatsby-image"
 import Back from "../images/arrow-back.png"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
+import { jsx, css } from "@emotion/core"
 
-const CustomSection = styled.section`
-  position: relative;
-  padding:100px 0;
-`
 
 export default function Template({ data }) {
-  const project = data.contentfulProject // data.markdownRemark holds your post data
+  const project = data.contentfulProject
   return (
     <Layout fixed="true">
       <SEO title="About" />
@@ -57,7 +54,7 @@ export default function Template({ data }) {
 
 
               }
-              <div style={{position:'fixed', top:'100px', right:'0', background:'#ccc', borderRadius:'100%'}}>
+              <div css={backLink}>
                 <Link to="/work/">
                   <img src={Back} width="10px"/>
                   <span style={{display:'block'}}>
@@ -92,4 +89,30 @@ export const pageQuery = graphql`
           projectLink
     }
   }
+`
+
+// Styles etc go here
+////////////**********************/////////////////////////////////////////////////
+
+
+const CustomSection = styled.section`
+  position: relative;
+  padding:100px 0;
+`
+
+const backLink = css`
+color:#00;
+font-family: 'UniversLTStd-Bold';
+position:fixed;
+top:calc(58.4667px + 10px);
+padding:40px 0 0 0;
+right:10px;
+border-radius:100%;
+height:150px;
+width:150px;
+background: rgb(63,94,251);
+background: -moz-radial-gradient(circle, rgba(63,94,251,0.7) 0%, rgba(63,94,251,0.6) 6%, rgba(63,94,251,0.3) 16%, rgba(63,94,251,0.1) 46% ,rgba(63,94,251,0) 66%);
+background: -webkit-radial-gradient(circle, rgba(63,94,251,0.7) 0%, rgba(63,94,251,0.6) 6%, rgba(63,94,251,0.3) 16%, rgba(63,94,251,0.1) 46% ,rgba(63,94,251,0) 66%);
+background: radial-gradient(circle, rgba(63,94,251,0.7) 0%, rgba(63,94,251,0.6) 6%, rgba(63,94,251,0.3) 16%, rgba(63,94,251,0.1) 46% ,rgba(63,94,251,0) 66%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f5efb",endColorstr="#3f5efb",GradientType=1);
 `

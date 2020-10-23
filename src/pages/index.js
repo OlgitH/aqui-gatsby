@@ -1,5 +1,4 @@
-import React, { useEffect } from "react"
-import "bootstrap/dist/css/bootstrap-grid.min.css"
+import React from "react"
 
 import Layout from "../components/layout"
 import Diagram from "../images/diagram.png"
@@ -11,38 +10,25 @@ import BG from "../images/bg/chairs.jpg"
 import SEO from "../components/seo"
 import SplitText from "react-pose-text"
 import styled from "@emotion/styled"
+import { css } from "@emotion/core"
 
 
-const CustomSection = styled.section`
-  position: relative;
-  height:100vh;
-  background-image:${props => props.bg ? `url('${props.bg}')` : `blue`};
-  color:#fff;
-  background-size:1600px;
-  background-position:bottom;
-  background-repeat:no-repeat;
-`
 
-
-const charPoses = {
-  exit: { opacity: 0, y: 20 },
-  enter: {
-    opacity: 1,
-    x: 0,
-    delay: ({ charIndex }) => charIndex * 30,
-  },
-}
 
 const IndexPage = () => {
-  useEffect(() => {})
 
   return (
     <Layout>
-      <SEO title="Aqui Digital - Homepage" />
+
+    <SEO
+      title="Aqui Digital - Homepage"
+      description="A modern design, web development and consultancy agency that makes digital easy."
+      url="https://aqui.agency"
+    />
 
 
         <CustomSection bg={BG}>
-            <div className="overlay" style={{background:`url(${WaveTop})`, backgroundSize:'cover', height:'100%', backgroundRepeat:'no-repeat', backgroundPosition:'0 180px'}}>
+            <div className="overlay" css={overlayStyle}>
                 <div className="text-box">
                       <div className="container">
                         <div className="row">
@@ -54,7 +40,7 @@ const IndexPage = () => {
                                         pose="enter"
                                         charPoses={charPoses}
                                       >
-                                      The modern design, web development and consultancy firm that makes digital easy.
+                                      A modern design, web development and consultancy agency that makes digital easy.
                                       </SplitText>
                                   </h2>
                               </div>
@@ -66,7 +52,7 @@ const IndexPage = () => {
 
         </CustomSection>
 
-      <section className="standard" style={{background:`url(${WaveBottom})`, backgroundSize:'contain', backgroundRepeat:'no-repeat', backgroundPosition:'0 -100px'}}>
+      <section className="standard" css={designProcess}>
         <div className="container">
           <div className="row">
             <div className="col-md-5">
@@ -87,3 +73,49 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+
+// Styles etc go here
+////////////**********************/////////////////////////////////////////////////
+
+
+
+
+const CustomSection = styled.section`
+  position: relative;
+  height:100vh;
+  background-image:${props => props.bg ? `url('${props.bg}')` : `blue`};
+  color:#fff;
+  background-size:1600px;
+  background-position:bottom;
+  background-repeat:no-repeat;
+  max-height:690px;
+`
+
+const designProcess = css`
+background:url(${WaveBottom});
+background-size: contain;
+background-repeat: no-repeat;
+background-position: 0 -100px;
+@media (max-width: 1200px) {
+  background-position: 0 -20px;
+}
+`
+
+const overlayStyle = css`
+  background: url(${WaveTop});
+  background-size:cover;
+  height:100%;
+  background-repeat:no-repeat;
+  background-position:0 180px;
+`
+
+
+const charPoses = {
+  exit: { opacity: 0, y: 20 },
+  enter: {
+    opacity: 1,
+    x: 0,
+    delay: ({ charIndex }) => charIndex * 30,
+  },
+}

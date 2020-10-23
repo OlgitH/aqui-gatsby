@@ -1,16 +1,13 @@
 import { Link } from "gatsby"
 import React from "react"
-import "bootstrap/dist/css/bootstrap-grid.min.css"
-import { css } from "@emotion/core"
 import ArrowBack from "../../images/arrow-back.png"
 import Arrow from "../../images/arrow.png"
 import SimpleReactValidator from 'simple-react-validator';
 import styled from "@emotion/styled"
 import "./form.css"
+import { InputGroup } from './styleComponents'
 
-const InputGroup = styled.div`
-margin:10px 0;
-`
+
 
 export default class FormMessage extends React.Component {
 

@@ -1,5 +1,4 @@
 import React from "react"
-import "bootstrap/dist/css/bootstrap-grid.min.css"
 import SimpleReactValidator from 'simple-react-validator';
 import axios from 'axios';
 import "./form.css"

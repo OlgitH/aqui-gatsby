@@ -1,7 +1,5 @@
 import { Link } from "gatsby"
 import React from "react"
-import "bootstrap/dist/css/bootstrap-grid.min.css"
-import { css } from "@emotion/core"
 import "./form.css"
 
 export default class Success extends React.Component {

@@ -1,43 +1,11 @@
 import React from "react"
-import "bootstrap/dist/css/bootstrap-grid.min.css"
-
 import Layout from "../components/layout"
 import Form from "../components/form/form"
 import SEO from "../components/seo"
 import SplitText from "react-pose-text"
 import styled from "@emotion/styled"
-
 import { connect } from "react-redux"
 
-const CustomSection = styled.section`
-  position: relative;
-  padding:40vh 0;
-  background:#ff9d00;
-  color:#fff;
-`
-const Button = styled.button`
- background-color:#fff;
- border-radius: 10px;
- -webkit-border-radius: 10px;
- cursor:pointer;
- padding:6px 10px;
- outline:0;
- border:0;
- &:hover {
-   background-color:#fff;
-
- }
-
-`
-
-const charPoses = {
-  exit: { opacity: 0, y: 20 },
-  enter: {
-    opacity: 1,
-    x: 0,
-    delay: ({ charIndex }) => charIndex * 30,
-  },
-}
 
 
 const ContactPage = ({formVisible, toggleForm}) => {
@@ -96,3 +64,41 @@ const ConnectedContactPage = connect(mapStateToProps, mapDispatchToProps)(Contac
 
 
 export default ConnectedContactPage
+
+
+
+// Styles etc go here
+////////////**********************/////////////////////////////////////////////////
+
+
+
+
+const CustomSection = styled.section`
+  position: relative;
+  padding:40vh 0;
+  background:blue;
+  color:#fff;
+`
+const Button = styled.button`
+ background-color:#fff;
+ border-radius: 10px;
+ -webkit-border-radius: 10px;
+ cursor:pointer;
+ padding:6px 10px;
+ outline:0;
+ border:0;
+ margin-top:20px;
+ &:hover {
+   background-color:#fff;
+
+ }
+`
+
+const charPoses = {
+  exit: { opacity: 0, y: 20 },
+  enter: {
+    opacity: 1,
+    x: 0,
+    delay: ({ charIndex }) => charIndex * 30,
+  },
+}
