@@ -13,7 +13,7 @@ const ContactPage = ({formVisible, toggleForm}) => {
 
   return (
     <Layout>
-      <SEO title="Oliver Berman - Contact" />
+      <SEO title="Contact" />
 
         <CustomSection>
         <div className="container">

@@ -14,7 +14,7 @@ export default function Template({ data }) {
   const project = data.contentfulProject
   return (
     <Layout fixed="true">
-      <SEO title="About" />
+      <SEO title=`"Project - " ${project.title}` />
 
       <CustomSection>
         <div className="container">
