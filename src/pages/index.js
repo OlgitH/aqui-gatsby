@@ -102,6 +102,7 @@ const designProcess = css`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0 -100px;
+  padding:200px 0;
   @media (max-width: 768px) {
     padding:140px 0;
   }

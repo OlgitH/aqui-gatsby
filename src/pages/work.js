@@ -31,6 +31,6 @@ export default WorkPage
 const CustomSection = styled.section`
   position: relative;
   height:100px;
-  background:blue;
+  background:#2e23fc;
   color:#fff;
 `

@@ -92,7 +92,7 @@ const CustomSection = styled.section`
   position: relative;
   height:100vh;
   min-height:640px;
-  background:${props => props.bg ? `url('${props.bg}')` : `blue`};
+  background:${props => props.bg ? `url('${props.bg}')` : `#2e23fc`};
   color:#fff;
   background-size:cover;
   background-repeat:no-repeat;
@@ -109,11 +109,15 @@ const CustomSection = styled.section`
 
 const skillset = css`
 background:url(${WaveBottom});
-background-size: contain;
+background-size: cover;
 background-repeat: no-repeat;
-background-position: 0 -1px;
+background-position: 0 -70px;
 @media (max-width: 1200px) {
   background-position: 0 -20px;
+}
+padding:200px 0;
+@media (max-width: 768px) {
+  padding:140px 0;
 }
 `
 
@@ -127,7 +131,9 @@ const overlayStyle = css`
     position:absolute;
     width:100%;
     bottom:4rem;
-
+    @media (max-width: 768px) {
+      bottom:2rem;
+    }
   }
 `
 

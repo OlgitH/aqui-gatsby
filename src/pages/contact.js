@@ -76,7 +76,7 @@ export default ConnectedContactPage
 const CustomSection = styled.section`
   position: relative;
   padding:40vh 0;
-  background:blue;
+  background:#2e23fc;
   color:#fff;
   h2 {
     font-family: 'UniversLTStd-Bold';
