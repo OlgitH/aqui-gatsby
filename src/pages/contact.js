@@ -3,19 +3,22 @@ import Layout from "../components/layout"
 import Form from "../components/form/form"
 import SEO from "../components/seo"
 import SplitText from "react-pose-text"
-import styled from "@emotion/styled"
 import { connect } from "react-redux"
-
+import styled from "@emotion/styled"
+import { css } from "@emotion/core"
+import Wave from "../images/bg/contact-wave.svg"
 
 
 const ContactPage = ({formVisible, toggleForm}) => {
 
 
   return (
-    <Layout>
+    <Layout blueText="true">
       <SEO title="Contact" />
 
         <CustomSection>
+        <div css={waveContainer}></div>
+
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-10">
@@ -76,7 +79,7 @@ export default ConnectedContactPage
 const CustomSection = styled.section`
   position: relative;
   padding:40vh 0;
-  background:#2e23fc;
+  background:#00f090;
   color:#fff;
   h2 {
     font-family: 'UniversLTStd-Bold';
@@ -96,6 +99,18 @@ const Button = styled.button`
 
  }
 `
+
+const waveContainer = css`
+background: url(${Wave});
+background-size:cover;
+background-repeat:no-repeat;
+background-position:0 -200px;
+position:absolute;
+top:0;
+width:100%;
+height:460px;
+`
+
 
 const charPoses = {
   exit: { opacity: 0, y: 20 },

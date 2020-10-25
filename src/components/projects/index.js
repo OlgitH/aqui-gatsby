@@ -45,30 +45,34 @@ const Projects = () => {
 
     <div css={waveContainer}>
         <CustomSection initialPose="exit" pose="enter" >
-          <div className="container">
-            <div className="row" style={{ margin: "-8px" }}>
-              {projects.map((project, i) => (
-                <div className="col-6 col-md-3 px-0" key={i}>
-                  <GridItem
-                    initialPose="exit"
-                    pose="enter"
-                    css={gridItemStyles}
-                    onMouseEnter={addHoverClass}
-                    onMouseLeave={removeHoverClass}
-                    className="grid-item"
 
-                  > <Link to={`../projects/${project.node.slug}`}>
-                      <Img fluid={project.node.featureImage.fluid} />
-                      <div css={projectDetails}>
-                      <h6>{project.node.title}</h6>
+
+                <div className="container">
+                  <div className="row" style={{ margin: "-8px" }}>
+                    {projects.map((project, i) => (
+                      <div className="col-6 col-md-3 px-0" key={i}>
+                        <GridItem
+                          initialPose="exit"
+                          pose="enter"
+                          css={gridItemStyles}
+                          onMouseEnter={addHoverClass}
+                          onMouseLeave={removeHoverClass}
+                          className="grid-item"
+
+                        > <Link to={`../projects/${project.node.slug}`}>
+                            <Img fluid={project.node.featureImage.fluid} />
+                            <div css={projectDetails}>
+                            <h6>{project.node.title}</h6>
+                            </div>
+                          </Link>
+
+                        </GridItem>
                       </div>
-                    </Link>
-
-                  </GridItem>
+                    ))}
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
+
+
         </CustomSection>
     </div>
 
@@ -83,11 +87,13 @@ export default Projects
 ////////////**********************/////////////////////////////////////////////////
 
 const waveContainer = css`
-background: url(${WaveBottom});
-background-size:contain;
+background-image: url(${WaveBottom});
+background-size:cover;
 background-repeat:no-repeat;
-background-repeat:no-repeat;
-background-position:top;
+background-position:0 -340px;
+width:100%;
+padding-top:100px;
+
 `
 
 const gridItemStyles = css`
@@ -103,9 +109,9 @@ const projectDetails = css`
   width:100%;
   height:100%;
   z-index:999;
-  color:#2e23fc;
+  color:#1b1280;
   padding:15px;
-  background:#fff;
+  background:#00f090;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.25s linear;

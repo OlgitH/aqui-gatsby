@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SplitText from "react-pose-text"
 import WaveBottom from "../images/bg/about-wave-bottom.svg"
+import Wave from "../images/bg/about-wave-blue.svg"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
@@ -12,13 +13,14 @@ const AboutPage = () => {
 
 
   return (
-    <Layout>
+    <Layout blueText="true">
       <SEO
       title="About"
       description="We are a multidisciplinary, international digital agency"
       />
 
         <CustomSection>
+            <div css={waveContainer}></div>
             <div className="overlay" css={overlayStyle}>
                 <div className="text-box">
                       <div className="container">
@@ -92,7 +94,7 @@ const CustomSection = styled.section`
   position: relative;
   height:100vh;
   min-height:640px;
-  background:${props => props.bg ? `url('${props.bg}')` : `#2e23fc`};
+  background:${props => props.bg ? `url('${props.bg}')` : `#00f090`};
   color:#fff;
   background-size:cover;
   background-repeat:no-repeat;
@@ -135,6 +137,18 @@ const overlayStyle = css`
       bottom:2rem;
     }
   }
+`
+const waveContainer = css`
+background: url(${Wave});
+background-size:cover;
+background-repeat:no-repeat;
+background-position:0 0;
+@media (max-width: 768px) {
+  background-position:0 -80px;
+}
+position:absolute;
+width:100%;
+height:460px;
 `
 
 

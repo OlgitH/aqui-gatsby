@@ -13,7 +13,7 @@ import { jsx, css } from "@emotion/core"
 export default function Template({ data }) {
   const project = data.contentfulProject
   return (
-    <Layout fixed="true">
+    <Layout fixed="true" blueText="true">
       <SEO title={`Project - ${project.title}`} />
 
       <CustomSection>
@@ -101,7 +101,7 @@ const CustomSection = styled.section`
 `
 
 const backLink = css`
-color:#000;
+color:#8f8888;
 font-family: 'UniversLTStd-Bold';
 position:fixed;
 top:calc(58.4667px + 10px);

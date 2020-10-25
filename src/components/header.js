@@ -4,22 +4,32 @@ import React from "react"
 import "bootstrap/dist/css/bootstrap-grid.min.css"
 import styled from "@emotion/styled"
 import Logo from "../images/logo/logo-white.png"
+import LogoBlue from "../images/logo/logo-blue.png"
 
 
 
-const Header = ({fixed}) => (
+
+const Header = ({fixed, blueText}) => (
   <MainHeader rel={fixed}>
     <div className="container">
       <div className="row">
         <div className="col-4">
           <h1 className="logo">
+          {
+            blueText ?
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <img src={LogoBlue} width="100"/>
+            </Link>
+            :
             <Link to="/" style={{ textDecoration: "none" }}>
               <img src={Logo} width="100"/>
             </Link>
+          }
+
           </h1>
         </div>
         <div className="col-8 d-flex justify-content-end">
-          <Menu>
+          <Menu blueText={blueText}>
             <ul>
               <li>
                 <Link to="/about/">About</Link>
@@ -61,7 +71,7 @@ const MainHeader = styled.header`
   left:0;
   width:100%;
   z-index:99;
-  background:${props => props.rel ? `#2e23fc` : `transparent`};
+  background:${props => props.rel ? `#00f090` : `transparent`};
   .logo {
     padding:4px 0;
   }
@@ -85,7 +95,7 @@ const Menu = styled.div`
       }
       a {
         text-decoration: none;
-        color:#fff;
+        color: ${props => props.blueText ? `#1b1280` : `#fff`};
       }
     }
   }

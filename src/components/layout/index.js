@@ -35,12 +35,12 @@ const Button = styled.button`
 
 `
 
-const LO = ({ children, formVisible, toggleForm, fixed }) => {
+const LO = ({ children, formVisible, toggleForm, fixed, blueText }) => {
 
 
   return (
     <>
-      <Header fixed={fixed} />
+      <Header fixed={fixed} blueText={blueText}/>
       <div>
         <main>{children}</main>
         <Footer>

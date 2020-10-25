@@ -6,13 +6,14 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
 
+
 const WorkPage = () => {
 
   return (
-    <Layout>
+    <Layout blueText="true">
+    
       <SEO title="Work" />
 
-      <CustomSection></CustomSection>
 
       <div css={css`padding-bottom:80px;`}>
         <Projects />
@@ -27,10 +28,3 @@ export default WorkPage
 
 // Styles etc go here
 ////////////**********************/////////////////////////////////////////////////
-
-const CustomSection = styled.section`
-  position: relative;
-  height:100px;
-  background:#2e23fc;
-  color:#fff;
-`
