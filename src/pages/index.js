@@ -21,34 +21,34 @@ const IndexPage = () => {
     <Layout>
 
     <SEO
-      title="Aqui Digital - Homepage"
+      title="Homepage"
       description="A modern design, web development and consultancy agency that makes digital easy."
       url="https://aqui.agency"
     />
 
 
         <CustomSection bg={BG}>
-            <div className="overlay" css={overlayStyle}>
-                <div className="text-box">
-                      <div className="container">
-                        <div className="row">
+        <div className="overlay" css={overlayStyle}>
+            <div className="text-box">
+                  <div className="container">
+                    <div className="row">
 
-                              <div className="col-8">
-                                  <h2 className="slideInLg">
-                                      <SplitText
-                                        initialPose="exit"
-                                        pose="enter"
-                                        charPoses={charPoses}
-                                      >
-                                      A modern design, web development and consultancy agency that makes digital easy.
-                                      </SplitText>
-                                  </h2>
-                              </div>
+                          <div className="col-md-8 col-12">
+                              <h2 className="slideInLg">
+                                  <SplitText
+                                    initialPose="exit"
+                                    pose="enter"
+                                    charPoses={charPoses}
+                                  >
+                                  A modern design, web development and consultancy agency that makes digital easy.
+                                  </SplitText>
+                              </h2>
+                          </div>
 
-                        </div>
-                      </div>
-                </div>
+                    </div>
+                  </div>
             </div>
+        </div>
 
         </CustomSection>
 
@@ -84,30 +84,43 @@ export default IndexPage
 const CustomSection = styled.section`
   position: relative;
   height:100vh;
-  background-image:${props => props.bg ? `url('${props.bg}')` : `blue`};
+  background-image:${props => props.bg ? `url('${props.bg}')` : `#b3fcf3`};
   color:#fff;
   background-size:1600px;
-  background-position:bottom;
+  background-position:center;
   background-repeat:no-repeat;
   max-height:690px;
+  h2 {
+    font-family:'UniversLTStd-Bold';
+  }
 `
 
 const designProcess = css`
-background:url(${WaveBottom});
-background-size: contain;
-background-repeat: no-repeat;
-background-position: 0 -100px;
-@media (max-width: 1200px) {
-  background-position: 0 -20px;
-}
+  background:url(${WaveBottom});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 -100px;
+  @media (max-width: 1200px) {
+    background-position: 0 -20px;
+  }
 `
 
 const overlayStyle = css`
   background: url(${WaveTop});
   background-size:cover;
-  height:100%;
+  height:280px;
   background-repeat:no-repeat;
-  background-position:0 180px;
+  background-position:0 0;
+  position:absolute;
+  bottom:0;
+  width:100%;
+
+  .text-box {
+    position:absolute;
+    width:100%;
+    bottom:4rem;
+  }
+
 `
 
 

@@ -18,7 +18,7 @@ const ContactPage = ({formVisible, toggleForm}) => {
         <CustomSection>
         <div className="container">
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 col-10">
               <p>
                 All great things start with a conversation. We’d love to hear
                 from you if you have an interesting project.
@@ -78,6 +78,9 @@ const CustomSection = styled.section`
   padding:40vh 0;
   background:blue;
   color:#fff;
+  h2 {
+    font-family: 'UniversLTStd-Bold';
+  }
 `
 const Button = styled.button`
  background-color:#fff;

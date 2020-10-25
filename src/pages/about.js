@@ -19,12 +19,12 @@ const AboutPage = () => {
       />
 
         <CustomSection>
-            <div className="overlay">
+            <div className="overlay" css={overlayStyle}>
                 <div className="text-box">
                       <div className="container">
                         <div className="row">
 
-                              <div className="col-lg-6 col-md-8">
+                              <div className="col-lg-8 col-md-8 col-12">
                                   <h2 className="slideInLg">
                                       <SplitText
                                         initialPose="exit"
@@ -97,6 +97,14 @@ const CustomSection = styled.section`
   background-size:cover;
   background-repeat:no-repeat;
   max-height:800px;
+  h2 {
+    font-family: 'UniversLTStd-Bold';
+  }
+  p{
+    @media (min-width: 1024px) {
+      width:86%;
+    }
+  }
 `
 
 const skillset = css`
@@ -108,6 +116,22 @@ background-position: 0 -1px;
   background-position: 0 -20px;
 }
 `
+
+const overlayStyle = css`
+
+  width:100%;
+  height:100%;
+  position:relative;
+
+  .text-box {
+    position:absolute;
+    width:100%;
+    bottom:4rem;
+
+  }
+`
+
+
 
 
 const charPoses = {
