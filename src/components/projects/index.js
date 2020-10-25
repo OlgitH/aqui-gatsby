@@ -103,7 +103,7 @@ const projectDetails = css`
   width:100%;
   height:100%;
   z-index:999;
-  color:blue;
+  color:#2e23fc;
   padding:15px;
   background:#fff;
   visibility: hidden;

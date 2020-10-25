@@ -86,7 +86,7 @@ export default IndexPage
 const CustomSection = styled.section`
   position: relative;
   height:100vh;
-  background-image:${props => props.bg ? `url('${props.bg}')` : `#b3fcf3`};
+  background-image:${props => props.bg ? `url('${props.bg}')` : `#2e23fc`};
   color:#fff;
   background-size:1600px;
   background-position:center;

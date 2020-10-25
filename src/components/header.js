@@ -61,7 +61,7 @@ const MainHeader = styled.header`
   left:0;
   width:100%;
   z-index:99;
-  background:${props => props.rel ? `blue` : `transparent`};
+  background:${props => props.rel ? `#2e23fc` : `transparent`};
   .logo {
     padding:4px 0;
   }
