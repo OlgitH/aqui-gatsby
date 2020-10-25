@@ -62,7 +62,9 @@ const IndexPage = () => {
               </p>
             </div>
             <div className="col-md-7">
-              <img src={Diagram} width="100%" alt="Diagram of Design Process"/>
+                <div className="diagramImgWrap">
+                  <img src={Diagram} width="100%" alt="Diagram of Design Process"/>
+                </div>
             </div>
           </div>
         </div>
@@ -100,9 +102,19 @@ const designProcess = css`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0 -100px;
+  @media (max-width: 768px) {
+    padding:140px 0;
+  }
   @media (max-width: 1200px) {
     background-position: 0 -20px;
   }
+  .diagramImgWrap {
+    padding:40px;
+    @media (max-width: 768px) {
+      padding:0;
+    }
+  }
+
 `
 
 const overlayStyle = css`
