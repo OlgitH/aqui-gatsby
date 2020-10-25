@@ -101,10 +101,18 @@ const CustomSection = styled.section`
 `
 
 const backLink = css`
-color:#00;
+color:#000;
 font-family: 'UniversLTStd-Bold';
 position:fixed;
 top:calc(58.4667px + 10px);
+@media (max-width: 768px) {
+  top: calc(58.4667px + 6px);
+  right: 6px;
+  font-size:0.8rem;
+  height:80px;
+  width:80px;
+  padding:10px 6px;
+}
 padding:40px 0 0 0;
 right:10px;
 border-radius:100%;

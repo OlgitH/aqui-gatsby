@@ -113,12 +113,16 @@ const overlayStyle = css`
   background-position:0 0;
   position:absolute;
   bottom:0;
+  left:0;
   width:100%;
 
   .text-box {
     position:absolute;
     width:100%;
     bottom:4rem;
+    @media (max-width: 768px) {
+      bottom:2rem;
+    }
   }
 
 `
