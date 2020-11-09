@@ -2,7 +2,6 @@ import React from "react"
 import Arrow from "../../images/arrow.png"
 import ArrowBack from "../../images/arrow-back.png"
 import SimpleReactValidator from 'simple-react-validator';
-import styled from "@emotion/styled"
 import "./form.css"
 import { InputGroup } from './styleComponents'
 

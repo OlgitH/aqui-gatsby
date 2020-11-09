@@ -6,8 +6,10 @@ module.exports = {
     title: `Aqui Digital`,
     description: `A modern design, web development and consultancy agency`,
     author: `Aqui Digital`,
+    siteUrl: `https://aqui.digital`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
