@@ -86,6 +86,12 @@ position:relative;
       color:#fff;
       font-size:2rem;
       line-height:1.2;
+      @media (max-width: 768px) {
+        font-size:1.2rem;
+        width:100%;
+        padding:20px;
+        text-align:center;
+      }
     }
   }
 `

@@ -23,7 +23,7 @@ const AboutPage = ({data}) => {
       <div className="hero" css={heroSection}>
 
       <div className="container">
-        <div className="row justify-content-center">
+        <div className="row justify-content-md-center">
 
 
 
@@ -64,13 +64,13 @@ const AboutPage = ({data}) => {
 
 
                       <div className="container">
-                        <div className="row">
+                        <div className="row justify-content-center">
 
                               <div className="col-md-4 align-self-end" >
 
-                                  <Img fixed={data.image1.childImageSharp.fixed}/>
+                                  <Img className="icon" fixed={data.image1.childImageSharp.fixed}/>
 
-                                  <p>
+                                  <p className="icon--text">
                                     We're currently working on a Mental Health App using React Native
                                   </p>
 
@@ -78,9 +78,9 @@ const AboutPage = ({data}) => {
 
                               <div className="col-md-4 align-self-end">
 
-                                  <Img fixed={data.image2.childImageSharp.fixed} />
+                                  <Img className="icon" fixed={data.image2.childImageSharp.fixed} />
 
-                                  <p>
+                                  <p className="icon--text">
                                     We're building a web application to help trainee lawyers...
                                   </p>
 
@@ -88,9 +88,9 @@ const AboutPage = ({data}) => {
 
                               <div className="col-md-4 align-self-end">
 
-                                  <Img fixed={data.image3.childImageSharp.fixed} />
+                                  <Img className="icon" fixed={data.image3.childImageSharp.fixed} />
 
-                                  <p>
+                                  <p className="icon--text">
                                     We recently finished a custom payment portal for a charity, that uses the Stripe payment gateway...
                                   </p>
 
@@ -137,8 +137,9 @@ const heroSection = css`
   background:#fff;
   padding:60px 0;
   text-align:center;
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     text-align:left;
+    padding:15px;
   }
 
 
@@ -155,7 +156,7 @@ const heroSection = css`
     color:#000;
     text-align:center;
     width:670px;
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
       width:100%;
       text-align:left;
     }
@@ -170,7 +171,14 @@ const topSection = css`
   background:#00f090;
   padding:60px 0;
 
-
+ .icon {
+   text-align:center;
+   margin:0 auto;
+   display:block!important;
+ }
+ .icon--text {
+   text-align:center;
+ }
   h2 {
     font-family: 'UniversLTStd-Bold';
   }
