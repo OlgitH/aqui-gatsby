@@ -137,6 +137,9 @@ const heroSection = css`
   background:#fff;
   padding:60px 0;
   text-align:center;
+  @media (min-width: 768px) {
+    text-align:left;
+  }
 
 
   h1 {
@@ -152,6 +155,11 @@ const heroSection = css`
     color:#000;
     text-align:center;
     width:670px;
+    @media (min-width: 768px) {
+      width:100%;
+      text-align:left;
+    }
+
   }
 
 

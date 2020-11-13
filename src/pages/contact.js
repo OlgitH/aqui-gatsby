@@ -32,16 +32,16 @@ useEffect(() => {
 
       <section className="contact_top-section" css={topSection}>
           <div className="container">
-              <div className="row">
-                <div className="col-md-6">
+              <div className="row justify-content-center">
+                <div className="col-sm-6 col-lg-4">
                 <div ref={envelopeRef} >
-                <Img fixed={data.file.childImageSharp.fixed} />
+                <Img fluid={data.file.childImageSharp.fluid} />
                 </div>
 
                 </div>
 
 
-                <div className="col-md-6">
+                <div className="col-md-6 col-lg-6">
                   <p>
                     All great things start with a conversation. We’d love to hear
                     from you if you have an interesting project.
@@ -152,8 +152,8 @@ export const contactQuery = graphql`
   query {
     file(relativePath: { eq: "envelope.png" }) {
       childImageSharp {
-        fixed(width: 400) {
-          ...GatsbyImageSharpFixed_withWebp
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

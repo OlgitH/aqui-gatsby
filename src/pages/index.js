@@ -100,7 +100,7 @@ const IndexPage = ({data}) => {
         <section className="services" css={servicesSection}>
             <div className="container">
                 <div className="row">
-                    <div className="col-4">
+                    <div className="col-md-4">
                       <SvgWeb
                         x={0}
                         y={0}
@@ -108,7 +108,7 @@ const IndexPage = ({data}) => {
                         xmlSpace="preserve"
                       />
                     </div>
-                    <div className="col-4">
+                    <div className="col-md-4">
                       <SvgDesign
                         x={0}
                         y={0}
@@ -116,7 +116,7 @@ const IndexPage = ({data}) => {
                         xmlSpace="preserve"
                       />
                     </div>
-                    <div className="col-4">
+                    <div className="col-md-4">
                       <SvgSEO
                         x={0}
                         y={0}
@@ -280,7 +280,7 @@ export const squareImage = graphql`
   fragment squareImage on File {
     childImageSharp {
       fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_withWebp
       }
     }
   }

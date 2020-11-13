@@ -49,28 +49,28 @@ class CafeComponent extends React.Component {
              image1: file(relativePath: { eq: "bg/chairs.jpg" }) {
                childImageSharp {
                  fluid(maxWidth: 1000) {
-                   ...GatsbyImageSharpFluid
+                   ...GatsbyImageSharpFluid_withWebp
                  }
                }
              },
              image2: file(relativePath: { eq: "bg/we-all-live-here.jpg" }) {
                childImageSharp {
                  fluid(maxWidth: 1000) {
-                   ...GatsbyImageSharpFluid
+                   ...GatsbyImageSharpFluid_withWebp
                  }
                }
              },
              image3: file(relativePath: { eq: "bg/gauss-bg.png" }) {
                childImageSharp {
                  fluid(maxWidth: 1000) {
-                   ...GatsbyImageSharpFluid
+                   ...GatsbyImageSharpFluid_withWebp
                  }
                }
              },
              image4: file(relativePath: { eq: "bg/gauss-bg-green.png" }) {
                childImageSharp {
                  fluid(maxWidth: 1000) {
-                   ...GatsbyImageSharpFluid
+                   ...GatsbyImageSharpFluid_withWebp
                  }
                }
              }
@@ -128,6 +128,7 @@ export default CafeComponent;
 
 
 const comparisonSection = css`
+overflow-x:hidden;
 position: relative;
 height:100vh;
 
@@ -150,14 +151,24 @@ height:100vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media (max-width: 768px) {
+    width:340px;
+    height:200px;
+    line-height: 200px;
+    padding:0 20px;
+  }
 
 
   h2 {
-    color:#fff;
-    line-height: 1.5;
-   display: inline-block;
-   vertical-align: middle;
-  }
+     color:#fff;
+     line-height: 1.5;
+     display: inline-block;
+     vertical-align: middle;
+     @media (max-width: 768px) {
+       font-size:1rem;
+     }
+    }
+
 }
 
 .beforeImage {

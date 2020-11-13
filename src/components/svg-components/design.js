@@ -41,8 +41,6 @@ class SvgComponent extends React.Component {
     .fromTo("#design_path1", { xPercent: 100, x: 0, autoAlpha:0}, {xPercent: 0, autoAlpha:1})
     .fromTo("#design_path2", { xPercent: 100, x: 0, autoAlpha:0}, {xPercent: 0, autoAlpha:1}, "<+0.1")
     .fromTo("#text", { autoAlpha:0}, {autoAlpha:1}, "<")
-
-
   }
   render() {
     return (
