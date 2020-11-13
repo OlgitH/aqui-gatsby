@@ -46,7 +46,6 @@ const Projects = () => {
     <div >
         <CustomSection initialPose="exit" pose="enter" >
 
-
                 <div className="container pt-4">
                   <div className="row" style={{ margin: "-8px" }}>
                     {projects.map((project, i) => (

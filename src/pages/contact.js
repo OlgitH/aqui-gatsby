@@ -46,7 +46,7 @@ useEffect(() => {
                     All great things start with a conversation. We’d love to hear
                     from you if you have an interesting project.
                   </p>
-                  <h2>
+                  <h1>
                     <SplitText
                       initialPose="exit"
                       pose="enter"
@@ -54,7 +54,7 @@ useEffect(() => {
                     >
                       Get in touch.
                     </SplitText>
-                  </h2>
+                  </h1>
                   <Button
                     onClick={ toggleForm }
                   >

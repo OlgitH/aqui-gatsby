@@ -21,7 +21,7 @@ export default function Template({ data }) {
           <div className="row">
             <div className="col-md-6">
 
-              <h2>{project.title}</h2>
+              <h1>{project.title}</h1>
 
               <p>
                 {project.description.description}

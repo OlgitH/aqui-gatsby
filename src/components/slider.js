@@ -36,7 +36,7 @@ const Slider = ({slides}) => {
         css={bgImageStyle}
       >
           <div className="slider--text">
-            <h2>{s.title}</h2>
+            <h1>{s.title}</h1>
           </div>
       </BackgroundImage>
 
@@ -77,7 +77,7 @@ position:relative;
       opacity:1;
     }
 
-    h2 {
+    h1 {
       margin: 0;
       position: absolute;
       top: 50%;
@@ -87,7 +87,7 @@ position:relative;
       font-size:2rem;
       line-height:1.2;
       @media (max-width: 768px) {
-        font-size:1.2rem;
+        font-size:1.6rem;
         width:100%;
         padding:20px;
         text-align:center;

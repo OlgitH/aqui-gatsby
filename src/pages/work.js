@@ -11,11 +11,11 @@ const WorkPage = () => {
 
   return (
     <Layout fixed="true" blueText="true" bgCol="#f6f6f6">
-    
+
 
       <SEO title="Work" />
 
-
+      <h1 style={{opacity:'0', height: 0}}>Our Work</h1>
       <div css={css`padding-bottom:80px;`}>
         <Projects />
       </div>

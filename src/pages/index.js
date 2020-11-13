@@ -49,21 +49,13 @@ const IndexPage = ({data}) => {
 
     <SEO
       title="Homepage"
-      description="A modern design, web development and consultancy agency that makes digital easy."
+      description="A web development, design and consultancy agency."
       url="https://aqui.agency"
     />
 
       <section css={topSection}>
       <div className="inner">
-
-
-
-
-
                   <Slider slides={defaultSlides} />
-
-
-
       </div>
       </section>
 
