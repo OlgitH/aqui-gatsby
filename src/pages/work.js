@@ -10,8 +10,9 @@ import { css } from "@emotion/core"
 const WorkPage = () => {
 
   return (
-    <Layout blueText="true">
+    <Layout fixed="true" blueText="true" bgCol="#f6f6f6">
     
+
       <SEO title="Work" />
 
 

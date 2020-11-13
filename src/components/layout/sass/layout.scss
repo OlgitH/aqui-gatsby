@@ -36,7 +36,8 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  // max-width:1600px;
+  // margin:0 auto;
 }
 
 article,
@@ -218,6 +219,9 @@ html {
   font: 112.5%/1.45em 'UniversLTStd-Light', sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
+  &.fixed {
+    padding-top:55.92px;
+  }
 }
 * {
   box-sizing: inherit;
@@ -241,6 +245,14 @@ body {
 }
 
 //CUSTOM STYLES
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:'UniversLTStd-Bold';
+}
+
+p {
+  font: 112.5%/1.45em 'UniversLTStd-Light', sans-serif;
+}
 
 h2, h3, p {
   color: #1b1280;

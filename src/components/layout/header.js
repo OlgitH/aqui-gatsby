@@ -3,14 +3,14 @@ import PropTypes from "prop-types"
 import React from "react"
 import "bootstrap/dist/css/bootstrap-grid.min.css"
 import styled from "@emotion/styled"
-import Logo from "../images/logo/logo-white.png"
-import LogoBlue from "../images/logo/logo-blue.png"
+import Logo from "../../images/logo/logo-white.png"
+import LogoBlue from "../../images/logo/logo-blue.png"
 
 
 
 
-const Header = ({fixed, blueText}) => (
-  <MainHeader rel={fixed}>
+const Header = ({fixed, blueText, bgCol}) => (
+  <MainHeader fixed={fixed} bgCol={bgCol}>
     <div className="container">
       <div className="row">
         <div className="col-4">
@@ -18,11 +18,11 @@ const Header = ({fixed, blueText}) => (
           {
             blueText ?
             <Link to="/" style={{ textDecoration: "none" }}>
-              <img src={LogoBlue} width="100"/>
+              <img src={LogoBlue} width="80"/>
             </Link>
             :
             <Link to="/" style={{ textDecoration: "none" }}>
-              <img src={Logo} width="100"/>
+              <img src={Logo} width="80"/>
             </Link>
           }
 
@@ -66,12 +66,12 @@ export default Header
 
 
 const MainHeader = styled.header`
-  position: ${props => props.rel ? `relative` : `absolute`};
+  position: ${props => props.fixed ? `fixed` : `relative`};
   top:0;
   left:0;
   width:100%;
   z-index:99;
-  background:${props => props.rel ? `#00f090` : `transparent`};
+  background:${props => props.fixed ? props.bgCol : `transparent`};
   .logo {
     padding:4px 0;
   }

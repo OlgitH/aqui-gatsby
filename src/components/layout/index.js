@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import Header from "../header"
+import Header from "./header"
 import Footer from "../footer"
 import Form from "../form/form"
 import styled from "@emotion/styled"
@@ -15,6 +15,8 @@ import { css } from "@emotion/core"
 import { connect } from "react-redux"
 import "./sass/layout.scss"
 import "bootstrap/dist/css/bootstrap-grid.min.css"
+import { Helmet } from 'react-helmet'
+import ContactList from "../contact"
 
 const linkStyle = css`
   text-decoration:underline;
@@ -29,25 +31,35 @@ const Button = styled.button`
  cursor:pointer;
  padding:6px 10px;
  outline:0;
+ margin-bottom:10px;
  &:hover {
    background-color:#f6f6f6;
  }
 
 `
 
-const LO = ({ children, formVisible, toggleForm, fixed, blueText }) => {
+const LO = ({ children, formVisible, toggleForm, fixed, blueText, bgCol }) => {
 
 
   return (
     <>
-      <Header fixed={fixed} blueText={blueText}/>
+      <Helmet>
+        <html className={fixed ? 'fixed' : ''} />
+      </Helmet>
+
+      <Header fixed={fixed} blueText={blueText} bgCol={bgCol}/>
       <div>
         <main>{children}</main>
         <Footer>
-          <Button onClick={toggleForm}>Send message via website</Button>
-          <p style={{fontSize:'0.8rem', marginBottom:0}}>or contact:</p>
-            <a href="mailto:berman.oj@gmail.com" css={linkStyle} style={{fontSize:'0.8rem'}}>berman.oj@gmail.com</a><br/>
-          <a href="tel:00447757067088" css={linkStyle} style={{fontSize:'0.8rem'}}>+44 (0)7757 076088</a>
+        <div className="row">
+          <div className="col-md-6">
+              <Button onClick={toggleForm}>Send message via website</Button>
+              <ContactList />
+          </div>
+          <div className="col-md-6 align-self-end">
+              <p style={{textAlign:'right'}}>Aqui Agency 2020</p>
+          </div>
+        </div>
         </Footer>
         <Form closeForm={toggleForm} isOpen={formVisible} />
       </div>

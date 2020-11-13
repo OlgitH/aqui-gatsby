@@ -43,11 +43,11 @@ const Projects = () => {
 
   return (
 
-    <div css={waveContainer}>
+    <div >
         <CustomSection initialPose="exit" pose="enter" >
 
 
-                <div className="container">
+                <div className="container pt-4">
                   <div className="row" style={{ margin: "-8px" }}>
                     {projects.map((project, i) => (
                       <div className="col-6 col-md-3 px-0" key={i}>
@@ -87,11 +87,7 @@ export default Projects
 ////////////**********************/////////////////////////////////////////////////
 
 const waveContainer = css`
-background-image: url(${WaveBottom});
-background-size:cover;
-background-repeat:no-repeat;
-background-position:0 -340px;
-width:100%;
+
 padding-top:100px;
 
 `

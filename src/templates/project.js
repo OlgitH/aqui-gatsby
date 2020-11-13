@@ -13,7 +13,7 @@ import { jsx, css } from "@emotion/core"
 export default function Template({ data }) {
   const project = data.contentfulProject
   return (
-    <Layout fixed="true" blueText="true">
+    <Layout fixed="true" blueText="true" bgCol="#f6f6f6">
       <SEO title={`Project - ${project.title}`} />
 
       <CustomSection>
