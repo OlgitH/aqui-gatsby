@@ -15,7 +15,7 @@ const WorkPage = () => {
 
       <SEO title="Work" />
 
-      <h1 style={{opacity:'0', height: 0}}>Our Work</h1>
+      <h1 style={{opacity:'0', height: 0, margin:'20px 0 0 0'}}>Our Work</h1>
       <div css={css`padding-bottom:80px;`}>
         <Projects />
       </div>
