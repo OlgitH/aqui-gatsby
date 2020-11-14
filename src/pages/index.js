@@ -282,13 +282,13 @@ export const squareImage = graphql`
 export const sliderImagesQuery = graphql`
   query {
 
-    image1: file(relativePath: { eq: "people-on-computer.jpg" }) {
+    image1: file(relativePath: { eq: "slider/people-on-computer.jpg" }) {
       ...squareImage
     }
-    image2: file(relativePath: { eq: "digital.jpg" }) {
+    image2: file(relativePath: { eq: "slider/digital.jpg" }) {
       ...squareImage
     }
-    image3: file(relativePath: { eq: "river.jpg" }) {
+    image3: file(relativePath: { eq: "slider/smallbusiness.png" }) {
       ...squareImage
     }
 
