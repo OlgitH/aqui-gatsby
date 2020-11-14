@@ -42,7 +42,7 @@ useEffect(() => {
 
 
                 <div className="col-md-6 col-lg-6">
-                  <p>
+                  <p className="blackText mt-md-0">
                     All great things start with a conversation. We’d love to hear
                     from you if you have an interesting project.
                   </p>

@@ -5,7 +5,6 @@ import Slider from "../components/slider"
 import Diagram from "../images/diagram.png"
 import WaveTop from "../images/bg/wave.svg"
 import WaveBottom from "../images/bg/home-wave-bottom.svg"
-import TopImage from "../images/people-on-computer.jpg"
 import BG from "../images/bg/chairs.jpg"
 import SvgWeb from '../components/svg-components/web.js'
 import SvgDesign from '../components/svg-components/design.js'
@@ -127,7 +126,7 @@ const IndexPage = ({data}) => {
           <div className="row">
             <div className="col-md-5">
               <h3>Design process</h3>
-              <p>All our creative projects start with a piece of paper and a pencil. We plan, design and prototype as much as possible before writing any code.
+              <p className="blackText">All our creative projects start with a piece of paper and a pencil. We plan, design and prototype as much as possible before writing any code.
                 We follow a User Centered approach.
               </p>
             </div>
@@ -288,7 +287,7 @@ export const sliderImagesQuery = graphql`
     image2: file(relativePath: { eq: "slider/digital.jpg" }) {
       ...squareImage
     }
-    image3: file(relativePath: { eq: "slider/smallbusiness.png" }) {
+    image3: file(relativePath: { eq: "slider/smallbusiness.jpg" }) {
       ...squareImage
     }
 
