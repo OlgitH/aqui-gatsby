@@ -2,13 +2,13 @@ import React from "react"
 
 import Layout from "../components/layout"
 import Slider from "../components/slider"
-import Diagram from "../images/diagram.png"
 import WaveTop from "../images/bg/wave.svg"
 import WaveBottom from "../images/bg/home-wave-bottom.svg"
 import BG from "../images/bg/chairs.jpg"
 import SvgWeb from '../components/svg-components/web.js'
 import SvgDesign from '../components/svg-components/design.js'
 import SvgSEO from '../components/svg-components/seo.js'
+import Img from  'gatsby-image'
 
 
 
@@ -132,7 +132,7 @@ const IndexPage = ({data}) => {
             </div>
             <div className="col-md-7">
                 <div className="diagramImgWrap">
-                  <img src={Diagram} width="100%" alt="Diagram of Design Process"/>
+                <Img fluid={data.diagram.childImageSharp.fluid} alt="Diagram of Design Process"/>
                 </div>
             </div>
           </div>
@@ -267,8 +267,8 @@ const charPoses = {
   },
 }
 
-export const squareImage = graphql`
-  fragment squareImage on File {
+export const fluidImage = graphql`
+  fragment fluidImage on File {
     childImageSharp {
       fluid(maxWidth: 1000) {
         ...GatsbyImageSharpFluid_withWebp
@@ -277,18 +277,20 @@ export const squareImage = graphql`
   }
 `
 
-
-export const sliderImagesQuery = graphql`
+export const homepageImagesQuery = graphql`
   query {
 
     image1: file(relativePath: { eq: "slider/people-on-computer.jpg" }) {
-      ...squareImage
+      ...fluidImage
     }
     image2: file(relativePath: { eq: "slider/digital.jpg" }) {
-      ...squareImage
+      ...fluidImage
     }
     image3: file(relativePath: { eq: "slider/smallbusiness.jpg" }) {
-      ...squareImage
+      ...fluidImage
+    }
+    diagram: file(relativePath: { eq: "diagram.png" }) {
+      ...fluidImage
     }
 
 

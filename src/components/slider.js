@@ -37,7 +37,7 @@ const Slider = ({slides}) => {
 
 
   useEffect(() => {
-    timer
+    return timer
   });
 
   if (!Array.isArray(slides) || length <= 0){
