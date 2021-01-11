@@ -18,11 +18,11 @@ const Header = ({fixed, blueText, bgCol}) => (
           {
             blueText ?
             <Link to="/" style={{ textDecoration: "none" }}>
-              <img src={LogoBlue} width="80"/>
+              <img src={LogoBlue} width="80" alt="Aqui Logo"/>
             </Link>
             :
             <Link to="/" style={{ textDecoration: "none" }}>
-              <img src={Logo} width="80"/>
+              <img src={Logo} width="80" alt="Aqui Logo"/>
             </Link>
           }
 

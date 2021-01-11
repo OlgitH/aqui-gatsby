@@ -48,26 +48,41 @@ const Projects = () => {
 
                 <div className="container pt-4">
                   <div className="row" style={{ margin: "-8px" }}>
-                    {projects.map((project, i) => (
-                      <div className="col-6 col-md-3 px-0" key={i}>
-                        <GridItem
-                          initialPose="exit"
-                          pose="enter"
-                          css={gridItemStyles}
-                          onMouseEnter={addHoverClass}
-                          onMouseLeave={removeHoverClass}
-                          className="grid-item"
+                    {projects.map((project, i) => {
 
-                        > <Link to={`../projects/${project.node.slug}`}>
-                            <Img fluid={project.node.featureImage.fluid} />
-                            <div css={projectDetails}>
-                            <h6>{project.node.title}</h6>
+
+                        if (project) {
+
+                          return (
+
+                            <div className="col-6 col-md-3 px-0" key={i}>
+                              <GridItem
+                                initialPose="exit"
+                                pose="enter"
+                                css={gridItemStyles}
+                                onMouseEnter={addHoverClass}
+                                onMouseLeave={removeHoverClass}
+                                className="grid-item"
+
+                              > <Link to={`../projects/${project.node.slug}`}>
+                                  <Img fluid={project.node.featureImage.fluid} />
+                                  <div css={projectDetails}>
+                                  <h6>{project.node.title}</h6>
+                                  </div>
+                                </Link>
+
+                              </GridItem>
                             </div>
-                          </Link>
 
-                        </GridItem>
-                      </div>
-                    ))}
+                          )
+
+                        }
+
+
+
+
+
+                    })}
                   </div>
                 </div>
 
