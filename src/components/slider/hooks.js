@@ -4,7 +4,6 @@ const useSlider = (slides, currentSlide, setCurrentSlide) => {
 
 
     useEffect(() => {
-
       const interval = setInterval(goToNextSlide,4000)
       return () => clearInterval(interval)
     })

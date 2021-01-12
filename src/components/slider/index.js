@@ -5,8 +5,6 @@ import useSlider from './hooks'
 
 const Slider = ({slides}) => {
 
-  const slideImage = useRef(null)
-  const slideText = useRef(null)
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const { goToPreviousSlide, goToNextSlide } = useSlider(slides, currentSlide, setCurrentSlide)
@@ -30,7 +28,7 @@ const Slider = ({slides}) => {
                             rgba(27, 18, 128, 0.6)
                           ),url(${slide.src})`
                       }}>
-                         <h2 ref={slideText} className="feature--text">{slide.title}</h2>
+                         <h2 className="feature--text">{slide.title}</h2>
                       </div>
                     )
                    })
