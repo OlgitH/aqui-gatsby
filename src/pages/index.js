@@ -21,23 +21,20 @@ import { css } from "@emotion/core"
 
 
 
-
-
-
 const IndexPage = ({data}) => {
 
   const defaultSlides = [
     {
       title: 'A full stack web development agency',
-      src: data.image1.childImageSharp.fluid
+      src: data.image1.childImageSharp.fluid.srcWebp
     },
     {
       title: 'We specialise in Next JS and Gatsby',
-      src: data.image2.childImageSharp.fluid
+      src: data.image2.childImageSharp.fluid.srcWebp
     },
     {
       title: 'We help new businesses and teach digital skills',
-      src: data.image3.childImageSharp.fluid
+      src: data.image3.childImageSharp.fluid.srcWebp
     },
   ]
 
@@ -54,6 +51,7 @@ const IndexPage = ({data}) => {
 
       <section css={topSection}>
       <div className="inner">
+
                   <Slider slides={defaultSlides} />
       </div>
       </section>
